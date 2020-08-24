@@ -1,0 +1,93 @@
+<html>
+<head>
+<style>
+h1
+{
+	text-align:center;
+}
+body
+{
+	background-image:url(8.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+.in
+{
+	padding:5px; 
+	border:1px solid black;
+}
+.in:hover
+{
+	border:2px solid blue;
+	background-color:yellow;
+}
+.in:focus
+{
+	border:2px solid blue;		
+	background-color:yellow;
+}
+a
+{
+	text-decoration:none;
+}
+
+
+
+</style>
+<script>
+function myfun()
+{
+	var use=document.getElementById("u").value;
+	var pas=document.getElementById("p").value;
+	if(use==pas)
+	{
+		//document.write("<a href='home.html'><input type='button' value='Login'></a>");
+		document.location.href="home.html";
+	
+	}
+	else
+	{
+		document.getElementById("1").innerHTML="<h3 style=color:red>Invaild username or password</h3>"
+		document.getElementById("u").value="";
+		document.getElementById("p").value="";
+	}
+
+}
+
+</script>
+
+
+</head>
+<body>
+
+<h1>Welcome to Khushi Estate</h1>
+
+<h2>Login</h2>
+
+<form>
+
+Username : <input type="text" placeholder="Enter Your Username" class="in" id="u" required> 
+
+<br/>
+<br/>
+Password : <input type="password" placeholder="Enter Your Password"class="in" id="p" required> 
+<br/>
+<br/>
+<p id="1"></p>
+<a href="#forgot"><u>Forgot Password?</u></a>
+
+<br/>
+<br/>
+
+<input type="button" value="Login" onclick="myfun()">
+<input type="button" value="Cancel">
+
+<br/>
+<br/>
+New Here? Click here for sign up <a href="signup.html"><u>Sign Up</u></a>
+
+
+</form>
+
+</body>
+</html>

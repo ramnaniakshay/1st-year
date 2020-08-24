@@ -1,0 +1,138 @@
+<html>
+<head>
+<style>
+h1
+{
+	text-align:center;
+}
+body
+{
+	background-image:url(5.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+.in
+{
+	padding:5px; 
+	border:1px solid black;
+}
+.in:hover
+{
+	border:2px solid blue;
+	background-color:yellow;
+}
+.in:focus
+{
+	border:2px solid blue;		
+	background-color:yellow;
+}
+
+form
+{
+	background-color:white;
+	border:2px solid black;
+	padding:10px;
+	margin-left:10px;
+	//display:inline-block;
+}
+
+
+
+
+
+
+
+</style>
+
+<title>Rent </title>
+
+<script>
+
+function myfun()
+{
+	var x=document.getElementById("a").value;
+	if(x=="")
+	{
+		document.getElementById("1").innerHTML="<h4 style=color:red>*Name Required</h4>";
+	}
+	else
+	{
+		document.getElementById("1").innerHTML="";
+	}
+	var y=document.getElementById("b").value;
+	if(y=="")
+	{
+		document.getElementById("2").innerHTML="<h4 style=color:red>*Number Required</h4>";
+	}
+	else
+	{
+		document.getElementById("2").innerHTML="";
+	}
+	var z=document.getElementById("c").value;
+	if(z=="")
+	{
+		document.getElementById("3").innerHTML="<h4 style=color:red>*Emailaddress Required</h4>";
+	}
+	else
+	{
+		document.getElementById("3").innerHTML="";
+	}
+	
+	
+}
+
+
+
+
+
+
+</script>
+</head>
+
+<body>
+
+
+<h1> Rent Form</h1>
+<form>
+
+Name : <input type="text" placeholder="Enter Your Name" class="in" id="a" required><p id="1"></p>
+<br/>
+<br/>
+Number : <input type="text" placeholder="Enter Your Number" class="in" id="b" required><p id="2"></p>
+<br/>
+<br/>
+Email Address : <input type="email" placeholder="Enter Your email" class="in" id="c" required><p id="3"></p>
+<br/>
+<br/>
+Choose: <input type="radio" name="xyz"> 1BHK <input type="radio" name="xyz"> 2BHK <input type="radio" name="xyz"> 3BHK
+<br>
+<br>
+Description of the house : <textarea rows="5" cols="20">  </textarea>
+<br>
+<br>
+Upload Images of the house:  <input type="file" name="image" accept="image/*" required>
+<br>
+<br>
+
+  &nbsp &nbsp &nbsp <a href="#terms">terms and conditions</a> 
+<br/>
+<br/>
+
+
+<input type="checkbox">I agree terms and conditions
+<br/>
+<br/>
+
+<input type="button" value="Submit" onclick="myfun()">
+<a href="home.html"><input type="button" value="Cancel"></a>
+<br/>
+<br/>
+
+
+
+</form>
+
+
+
+</body>
+</html>
